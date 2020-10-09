@@ -1,0 +1,32 @@
+[
+  {
+    "deployLink":"https://mesmeri.github.io/interior-build/",
+    "imgName":"interior.jpg",
+    "details":["HTML&CSS (SCSS)","JavaScript (GSAP, Swiper.js)"],
+    "isWideImg":true
+  },
+  {
+    "deployLink":"https://check-seven.vercel.app/",
+    "imgName":"check.jpg",
+    "details":["JavaScript (React.js, Redux)","Firebase"],
+    "isWideImg":true
+  },
+  {
+    "deployLink":"https://mockdatabase.vercel.app/",
+    "imgName":"datagrid.jpg",
+    "details":["JavaScript (React.js, Redux)"],
+    "isWideImg":true
+  },
+  {
+    "deployLink":"https://mesmeri.github.io/repair-build/",
+    "imgName":"repair.jpg",
+    "details":["HTML&CSS (SCSS)"],
+    "isWideImg":true
+  },
+  {
+    "deployLink":"https://mesmeri.github.io/yes/",
+    "imgName":"yes.jpg",
+    "details":["HTML&CSS (SCSS)","JavaScript (Slick.js)"],
+    "isWideImg":true
+  }
+]

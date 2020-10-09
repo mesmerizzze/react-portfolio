@@ -1,0 +1,99 @@
+@import '../../styles/variables';
+.menu {
+  background-color: var(--primary-color);
+  transition: background-color 0.5s ease;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  flex-direction: column;
+  .nav {
+    flex-grow: 1;
+    height: 0;
+    overflow: hidden;
+    width: fit-content;
+    align-self: center;
+    transform: scaleY(0);
+    &-button {
+        border: none;
+        width: 100%;
+        background: transparent;
+        text-transform: uppercase;
+        @include adaptive-font(26, 18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        padding: 0;
+        position: relative;
+        color: var(--muted-text-color);
+        transform: translateY(0);
+        &:focus,
+        &:active {
+            outline: none;
+        }
+    }
+  }
+}
+
+.nav__list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  li {
+      overflow: hidden;
+      padding-right: 40px;
+  }
+  a {
+    @include adaptive-font(115, 55);
+    letter-spacing: 0.1em;
+    font-family: $title-font-family;
+    display: grid;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    &::after {
+      content: '';
+      width: 250px;
+      display: inline-block;
+      position: absolute;
+      height: 1px;
+      top: 50%;
+      left: -100%;
+      transform: translateY(-50%);
+      transition: left 0.5s;
+      background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    }
+    .front,
+    .back {
+      grid-area: 1/1;
+      transition: 0.5s;
+      transition-delay: 0.25s;
+    }
+    .front {
+      clip-path: polygon(0 0, 100% 3%, 100% 50%, 0 50%);
+    }
+    .back {
+      clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    }
+    &:hover {
+      &::after {
+        left: 100%;
+      }
+      .front {
+        color: var(--muted-text-color);
+        transform: translate(8px, -2px);
+      }
+      .back {
+        color: var(--muted-text-color);
+        transform: translate(-8px, 2px);
+      }
+    }
+  }
+}

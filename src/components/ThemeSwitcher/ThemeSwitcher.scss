@@ -1,0 +1,24 @@
+.theme-switcher {
+  width: 25px;
+  height: 25px;
+  border: 0;
+  padding: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 999;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  @media screen and (min-width: 900px) {
+    right: 50px;
+    top: 50px;
+    width: 35px;
+    height: 35px;
+  }
+  &.moon {
+    background-image: url('../../images/moon.svg');
+  }
+  &.sun {
+    background-image: url('../../images/sunny.svg');
+  }
+}

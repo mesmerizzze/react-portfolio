@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.info {
+  width: 100%;
+  &__title {
+    @include adaptive-font(70, 40);
+    line-height: 1;
+    overflow: hidden;
+  }
+  &__position {
+    font-size: 0.4em;
+    color: var(--muted-text-color);
+  }
+  &__name,
+  &__position {
+    overflow: hidden;
+    position: relative;
+    display: block;
+  }
+}

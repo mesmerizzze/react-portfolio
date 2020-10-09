@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+.cursor {
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    pointer-events: none;
+    user-select: none;
+    border: 2px solid $accent-color;
+    background-color: transparent;
+}

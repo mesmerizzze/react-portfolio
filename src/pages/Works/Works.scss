@@ -1,0 +1,86 @@
+@import '../../styles/variables.scss';
+.works {
+  padding-top: 40px;
+  &__list {
+    padding: 40px 0 20px;
+    @media screen and (min-width: 700px) {
+        padding: 50px 50px 30px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding: 70px 100px 30px;
+    }
+  }
+  &__item {
+    width: 100%;
+    display: flex;
+    margin-bottom: 17vmax;
+    position: relative;
+    opacity: 1;
+    flex-direction: column;
+    @media screen and (min-width: 700px) {
+        flex-direction: row;
+    }
+    @media screen and (min-width: 1920px) {
+        margin-bottom: 180px;
+    }
+    &:nth-child(2n + 1) {
+        align-items: flex-end;
+        @media screen and (min-width: 700px) {
+            flex-direction: row-reverse;
+            align-items: stretch;
+        }
+        .works__descr {
+            align-items: flex-end;
+        }
+        .works__details {
+            text-align: right;
+            padding-left: 0;
+            padding-right: 30px;
+        }
+        .btn::after {
+            transform: translateX(110%);
+            background-image: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+        }
+        .btn:hover::after {
+            transform: translateX(0)
+        }
+    }
+  }
+  &__img-link {
+    width: 230px;
+    height: auto;
+    overflow: hidden;
+    &.wide {
+        width: 280px;
+    }
+    @media screen and (min-width: 700px) {
+        width: 350px;
+        &.wide {
+            width: 500px;
+        }
+    }
+  }
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    a {
+        margin-bottom: 30px;
+    }
+  }
+  &__details {
+    @include adaptive-font(24, 16);
+    color: var(--muted-text-color);
+    padding-left: 30px;
+  }
+}
+
+.about-portfolio {
+  display: block;
+  @include adaptive-font(50, 18);
+  text-align: center;
+  &__descr {
+    font-size: 0.7em;
+  }
+}

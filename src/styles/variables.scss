@@ -1,0 +1,16 @@
+$light-color: #ffffff;
+$dark-color: #000000;
+$muted-text-color: #777777;
+$accent-color: rgb(0, 128, 128);
+$font-family2: 'Baloo Tamma 2', cursive;
+$cursive-font-family: 'Merienda', cursive;
+$font-family: 'Abel', sans-serif;
+$title-font-family: 'Abel', sans-serif;
+
+
+$maxWidth: 1890;
+@mixin adaptive-font($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
