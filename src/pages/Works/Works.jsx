@@ -48,9 +48,9 @@ function Works({ mouseoverHandler, mouseleaveHandler }) {
 
         ScrollTrigger.batch('.works__item', {
           onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, duration: 1.3, ease: 'expo.inOut' }),
-          onLeave: batch => gsap.to(batch, { opacity: 0, y: 40, duration: 1.3, ease: 'expo.inOut' }),
-          onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, duration: 1.3, ease: 'expo.inOut' }),
-          onLeaveBack: batch => gsap.to(batch, { opacity: 0, y: 40, duration: 1.3, ease: 'expo.inOut' }),
+          onLeave: batch => gsap.to(batch, { opacity: 0, duration: 1.3, ease: 'expo.inOut' }),
+          onEnterBack: batch => gsap.to(batch, { opacity: 1, duration: 1.3, ease: 'expo.inOut' }),
+          onLeaveBack: batch => gsap.to(batch, { opacity: 0, duration: 1.3, ease: 'expo.inOut' }),
           start: '100px bottom',
           end: '90% 20%',
         })

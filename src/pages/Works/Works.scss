@@ -15,7 +15,8 @@
     display: flex;
     margin-bottom: 17vmax;
     position: relative;
-    opacity: 1;
+    transform: translateY(40px);
+    opacity: 0;
     flex-direction: column;
     @media screen and (min-width: 700px) {
         flex-direction: row;
